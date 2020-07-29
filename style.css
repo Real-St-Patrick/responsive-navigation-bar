@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 450;
+    font-size: 18px;
+}
+button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 15px;
+    border: none;
+}
+
+.header{
+    background: rgb(27, 108, 168);
+    width: 100%;
+    color: white;
+}
+.logo-wrap{
+    width:95%;
+    /* max-width: 98%; */
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: rgb(27, 108, 168);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.bar{
+    display: none;
+    transition:all 0.3s ease-in ;
+}
+.times{
+    display: none;
+}
+.bar1,
+.bar3{
+    background-color: white;
+    height: 4px;
+    width: 33px;
+    margin: 5px;
+}
+.bar2{
+    background-color: white;
+    height: 3px;
+    width: 18px;
+    margin: 5px;
+}
+.times .bar1{
+    transform: rotate(-38deg) translate(-3px);
+}
+.times .bar2 {
+    display: none;
+}
+.times .bar3{
+    transform: rotate(42deg) translate(-5px, -2px);
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s ease-in ;
+}
+.navbar ul li{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.navbar ul li a{
+    color: white;
+}
+.navbar ul li a:hover,
+:focus{
+    color: black;
+    transition: all 0.5s ease-in;
+}
+.login-area{
+    transition: all 0.5s ease-in;
+}
+.search{
+    border: none;
+    padding: 10px 15px;
+    background: rgba(173, 216, 230, 0.582);
+    border-radius: 5px;
+}
+.search::placeholder{
+    color: white;
+    font-size: 15px;
+}
+.btn{
+    background: rgba(173, 216, 230, 0.582);
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.btn:hover,
+:focus{
+    background: lightblue;
+    color: black;
+    transition: all 0.5s ease-in;
+}
+.mobile-view{
+    height: 0;
+    overflow: hidden;
+    transition: all 1s ease-in;
+}
+.mobile-navbar {
+    display: none;
+}
+.mobile-login-area{
+    display: none;
+}
+@media screen and (max-width:1079px){
+    .navbar ul li{
+        padding-right: 45px;
+    }
+    .navbar ul{
+        margin-right: 130px;
+    }
+    .login-area{
+        display: none;
+    }
+}
+@media screen and (max-width:996px){
+    .navbar ul{
+        margin-right: 70px;
+    }
+    .navbar ul li{
+        padding-right: 15px;
+    }
+}
+@media screen and (max-width:714px){
+    .bar{
+        display: block;
+    }
+    .times{
+        display: block;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .logo{
+        width: 100%;
+    }
+    .heading{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .mobile-login-area{
+        display: block;
+    }
+    .mobile-login-area .search{
+        padding: 15px 15px;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .mobile-login-area .mobile-btn{
+        margin-left: 5%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        /* flex-direction: column; */
+    }
+    .mobile-btn .btn{
+        padding: 15px 37px;
+    }
+    .mobile-navbar{
+        display: block;
+        margin-left: 5%;
+        height: 100vh;
+    }
+    .mobile-navbar ul li{
+        padding: 15px 15px 35px 0;
+        font-size: 20px;
+    }
+    .mobile-navbar ul li:first-child{
+        padding-top: 60px;
+    }
+    .mobile-navbar ul li a{
+        color: white;
+    }
+
+}
+
+
